@@ -1,0 +1,60 @@
+Q Load feedback.html in your Web browser without going through a URL
+  (i.e., the address bar would likely start with file:// ). Fill out
+  and submit the form. Observe the result so that you can recognize
+  this problem, and understand its cause, in case you see similar
+  results in the future.
+A All php language constructs are not interpreted
+
+Q If you have not already, and if you can, make sure that display_errors
+  is enabled on your development environment.
+A I'm using XAMPP w/ php 5.4.7 and display_errors is enabled
+
+Q If you have not already, and if you can, make sure that error_reporting
+  is set to E_ALL | E_STRICT on your development environment.
+A Error_reporting is set to "E_ALL | E_STRICT" by default
+
+Q Try introducing different errors in a PHP script—by improperly balancing
+  quotation marks, failing to use semicolons, referring to variables
+  improperly, and so on—to see the result.
+A Very useful to locate typos, unmatched quotes and similar errors
+
+Q Experiment with the hello.html and the hello.php pages to send different
+  values, including numbers, to the PHP script through the URL.
+A My first interpretation is that php seems to be treating all values
+  (i.e. letters, numbers) as strings when retrieving their values from
+  the _GET array and printing their value.
+
+  See hello_numbers.html for example HTML code.
+
+Q Create a variation on hello.html that sends multiple name=value pairs to a
+  PHP script. Have the PHP script then print all the received values.
+A See hello_multiple_NameVals.html & hello_multiple_NameVals.php
+
+Q If you’re the inquisitive type, and don’t mind waiting for answers, try
+  passing more complicated values to a page through the URL. Try using spaces
+  and punctuation to see what happens.
+A I'm using chrome on windows as the web browser. Embedding spaces in the URL
+  arguments are usually auto-transformed into %20 character sequences, which
+  represents the ascii numeric value for the space character.
+
+  Substituting different separator characters for the space character vary in
+  their behavior.
+
+  If I use + as a separator, for example:
+
+    http://localhost/URL?fname=John+Smith&lname=Jane+Doe
+
+  the + character is displayed by the php code as a space character.
+
+  However, if I use a comma as a separator:
+
+    http://localhost/URL?fname=John,Smith&lname=Jane,Doe
+
+  the comma is displayed by the php code as a comma.
+
+Q Create a new HTML form that performs a task you envision yourself needing
+  (or a lighter-weight version of that functionality). Then create the PHP
+  script that handles the form, printing just the received data.
+A See AddressBook.html & AddressBook.php for a simple form and php code which
+  prompts for information for an address book entry, and displays the entered
+  key/value pairs.
