@@ -1,0 +1,43 @@
+Q What is the significance of a form’s action attribute?
+A It specifies the name of a php script to execute after the
+  user enters data in a form
+
+Q What is the significance of a form’s method attribute?
+A If the method is GET, the elements of the form data are passed
+  to the "action" php script as part of the URL.
+
+  If the method is PUT, the elements of the form data are passed
+  to the "action" php script via the _POST php array
+
+Q Which method type can be bookmarked in the browser?
+A GET can be bookmarked
+
+Q What predefined variable will contain the data from a form
+  submission?
+A If the GET method is used, the _GET array will contain the
+  data from a form.
+
+  If the POST method is used, the _POST array will contain the
+  data from a form.
+
+  If the GET or POST method is used, the _REQUEST array will contain
+  the data from a form.
+
+Q Why must an HTML page that contains a form that’s being submitted
+  to a PHP script be loaded through a URL?
+A The HTML page must be loaded through a URL so that any PHP code
+  embedded in the HTML page or in another script called by the HTML
+  page is parsed and executed by a php-aware web server.
+
+Q Under what circumstances will attempts to enable display_errors in
+  a script not succeed?
+A If there are errors in your html code or at any point before
+  display_errors is enabled, no error messages will appear in the
+  web browser
+
+Q Why is it not secure to enable display_errors on live sites?
+A Other than looking unprofessional, it may lead to sensitive data being
+  displayed to the wrong people
+
+
+
